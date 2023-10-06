@@ -1,1423 +1,848 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T-Dev - My Personal Blog Website</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- 
-    - primary meta tags
-  -->
-  <title>Byte - Personal Blog Website</title>
-  <meta name="title" content="BYTE - Perosonal Blog Website">
-  <meta name="description" content="This is my personal blog Website.">
-
-  <!-- 
+    <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico"
+      type="image/x-icon"
+    />
 
-  <!-- 
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <!-- 
+    <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
 
-  <!-- 
-    - preload images
+    <!--
+    - google font link
   -->
-  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
-  <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
-  <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body id="top">
-
-  <!-- 
+  <body class="light-theme">
+    <!--
     - #HEADER
   -->
 
-  <header class="header" data-header>
-    <div class="container">
-
-      <a href="#" class="logo">
-        <img src="./assets/images/logo.png" width="119" height="37" alt="Wren logo">
-      </a>
-
-      <nav class="navbar" data-navbar>
-
-        <div class="navbar-top">
-          <a href="#" class="logo">
-            <img src="./assets/images/logo.png" width="119" height="37" alt="Wren logo">
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="#">
+            <img
+              src="./assets/images/logo-dark.png"
+              alt="Devblog's logo"
+              width="100%"
+              height="50"
+              class="logo-light"
+            />
+            <img
+              src="./assets/images/logo-light.png"
+              alt="Devblog's logo"
+              width="100%"
+              height="50"
+              class="logo-dark"
+            />
           </a>
 
-          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
-            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-          </button>
-        </div>
+          <div class="btn-group">
+            <button class="theme-btn theme-btn-mobile light">
+              <ion-icon name="moon" class="moon"></ion-icon>
+              <ion-icon name="sunny" class="sun"></ion-icon>
+            </button>
 
-        <ul class="navbar-list">
-
-          <li>
-            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
-          </li>
-
-          <li>
-            <a href="#topics" class="navbar-link hover-1" data-nav-toggler>Topics</a>
-          </li>
-
-          <li>
-            <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Featured Post</a>
-          </li>
-
-          <li>
-            <a href="#recent" class="navbar-link hover-1" data-nav-toggler>Recent Post</a>
-          </li>
-
-          <li>
-            <a href="#" class="navbar-link hover-1" data-nav-toggler>Contact</a>
-          </li>
-
-        </ul>
-
-        <div class="navbar-bottom">
-
-          <div class="profile-card">
-            <img src="./assets/images/my-avatar.png" width="48" height="48" alt="Steven" class="profile-banner">
-
-            <div>
-              <p class="card-title">Hello Tobi!</p>
-            </div>
+            <button class="nav-menu-btn">
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
           </div>
 
-          <!-- <ul class="link-list">
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Profile</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Articles Saved</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Add New Post</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">My Likes</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Account Setting</a>
-            </li>
-
-            <li>
-              <a href="#" class="navbar-bottom-link hover-1">Sign Out</a>
-            </li>
-
-          </ul> -->
-
-        </div>
-
-        <p class="copyright-text">
-          Copyright 2023 © Byte - Personal Blog.
-          Developed by Tobi
-        </p>
-
-      </nav>
-
-      <a href="#" class="btn btn-primary">Subscribe</a>
-
-      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
-        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
-      </button>
-
-    </div>
-  </header>
-
-
-
-
-
-  <main>
-    <article>
-
-      <!-- 
-        - #HERO
-      -->
-
-      <section class="hero" id="home" aria-label="home">
-        <div class="container">
-
-          <div class="hero-content">
-
-            <p class="hero-subtitle">Hello Everyone!</p>
-
-            <h1 class="headline headline-1 section-title">
-              I’m <span class="span">Etomu Tobi</span>
-            </h1>
-
-            <p class="hero-text">
-                As a frontend developer, graphic designer, and e-commerce marketer, I utilize creativity as the third dimension to enhance every digital encounter. I don't simply add visual elements for aesthetics; I craft experiences that resonate and guide users seamlessly through each interaction. My multidisciplinary approach ensures that every project is a harmonious blend of form and function, where design, development, and marketing converge to create exceptional digital landscapes.
-            </p>
-
-            <div class="input-wrapper">
-
-              <input type="email" name="email_address" placeholder="Type your email address" required
-                class="input-field" autocomplete="off">
-
-              <button type="submit" class="btn btn-primary">
-                <span class="span">Subscribe</span>
-
-                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
-              </button>
-
-            </div>
-
-          </div>
-
-          <div class="hero-banner">
-
-            <img src="./assets/images/my-avatar.png" width="327" height="490" alt="Wren Clark" class="w-100">
-
-            <img src="./assets/images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
-
-            <img src="./assets/images/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
-
-          </div>
-
-          <img src="./assets/images/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
-
-          <img src="./assets/images/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #TOPICS
-      -->
-
-      <section class="topics" id="topics" aria-labelledby="topic-label">
-        <div class="container">
-
-          <div class="card topic-card">
-
-            <div class="card-content">
-
-              <h2 class="headline headline-2 section-title card-title" id="topic-label">
-                Hot topics
-              </h2>
-
-              <p class="card-text">
-                Don't miss out on the latest news about Web-Devs, Software-Engineering, Blockchain-Dev...
-              </p>
-
-              <div class="btn-group">
-                <button class="btn-icon" aria-label="previous" data-slider-prev>
-                  <ion-icon name="arrow-back" aria-hidden="true"></ion-icon>
-                </button>
-
-                <button class="btn-icon" aria-label="next" data-slider-next>
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                </button>
-              </div>
-
-            </div>
-
-            <div class="slider" data-slider>
-              <ul class="slider-list" data-slider-container>
-
-                <li class="slider-item">
-                  <a href="https://web.dev/blog/" target="_blank" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-1.png" width="507" height="618" loading="lazy" alt="Sport"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title">Web-development</span>
-
-                      <p class="slider-subtitle">38 Articles</p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="https://dev.to/" target="_blank" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-2.png" width="507" height="618" loading="lazy" alt="Travel"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title">Software Engineering</span>
-
-                      <p class="slider-subtitle">63 Articles</p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="https://www.linkedin.com/pulse/top-6-best-blockchain-development-platforms-naeem-hasan/" target="_blank" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-3.png" width="507" height="618" loading="lazy" alt="Design"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title">Blockchain</span>
-
-                      <p class="slider-subtitle">78 Articles</p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="https://www.allthingsdistributed.com/" target="_blank" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-4.png" width="507" height="618" loading="lazy" alt="Movie"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title">Cloud Computing</span>
-
-                      <p class="slider-subtitle">125 Articles</p>
-                    </div>
-
-                  </a>
-                </li>
-
-                <li class="slider-item">
-                  <a href="https://www.wearedevelopers.com/magazine" target="_blank" class="slider-card">
-
-                    <figure class="slider-banner img-holder" style="--width: 507; --height: 618;">
-                      <img src="./assets/images/topic-5.png" width="507" height="618" loading="lazy" alt="Lifestyle"
-                        class="img-cover">
-                    </figure>
-
-                    <div class="slider-content">
-                      <span class="slider-title">Web-design</span>
-
-                      <p class="slider-subtitle">78 Articles</p>
-                    </div>
-
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #FEATURED POST
-      -->
-
-      <section class="section feature" aria-label="feature" id="featured">
-        <div class="container">
-
-          <h2 class="headline headline-2 section-title">
-            <span class="span">Editor's picked</span>
-          </h2>
-
-          <p class="section-text">
-            Featured and highly rated articles
-          </p>
-
-          <ul class="feature-list">
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="./assets/images/featured-1.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Engineering</a>
-
-                      <a href="#" class="span hover-2">#Programming</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">3 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Programming with Python
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="./assets/images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">By Programming</p>
-
-                        <p class="card-subtitle">15 Nov 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="https://www.linkedin.com/pulse/programming-python-parul-pandey" target="_blank" class="card-btn">Read more</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="./assets/images/featured-2.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Engineering</a>
-
-                      <a href="#" class="span hover-2">#Programming</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      Comparing Programming Paradigms for Application....
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="./assets/images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">By Programming</p>
-
-                        <p class="card-subtitle">05 Dec 2022</p>
-                      </div>
-                    </div>
-
-                    <a href="https://www.linkedin.com/advice/0/what-current-trends-challenges-application?utm_source=share&utm_medium=member_desktop&utm_campaign=copy" target="_blank" class="card-btn">Read more</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="./assets/images/featured-3.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Engineering</a>
-
-                      <a href="#" class="span hover-2">#Programming</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      How do you code accurately and quickly under time pressure?...
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="./assets/images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">By Programming</p>
-
-                        <p class="card-subtitle">18 Jan 2023</p>
-                      </div>
-                    </div>
-
-                    <a href="https://www.linkedin.com/advice/1/how-do-you-code-accurately-quickly-under-time-pressure?utm_source=share&utm_medium=member_desktop&utm_campaign=copy" target="_blank" class="card-btn">Read more</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="./assets/images/featured-4.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Engineering</a>
-
-                      <a href="#" class="span hover-2">#Programming</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      How can you benefit from joining a programming community?....
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="./assets/images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">By Programming</p>
-
-                        <p class="card-subtitle">22 April 2023</p>
-                      </div>
-                    </div>
-
-                    <a href="https://www.linkedin.com/advice/3/how-can-you-benefit-from-joining-programming-community?utm_source=share&utm_medium=member_desktop&utm_campaign=copy" target="_blank" class="card-btn">Read more</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="card feature-card">
-
-                <figure class="card-banner img-holder" style="--width: 1602; --height: 903;">
-                  <img src="./assets/images/featured-5.png" width="1602" height="903" loading="lazy"
-                    alt="Self-observation is the first step of inner unfolding" class="img-cover">
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-wrapper">
-                    <div class="card-tag">
-                      <a href="#" class="span hover-2">#Engineering</a>
-
-                      <a href="#" class="span hover-2">#Programming</a>
-                    </div>
-
-                    <div class="wrapper">
-                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                      <span class="span">6 mins read</span>
-                    </div>
-                  </div>
-
-                  <h3 class="headline headline-3">
-                    <a href="#" class="card-title hover-2">
-                      How can you know when your linear programming code is debugged?
-                    </a>
-                  </h3>
-
-                  <div class="card-wrapper">
-
-                    <div class="profile-card">
-                      <img src="./assets/images/author-1.png" width="48" height="48" loading="lazy" alt="Joseph"
-                        class="profile-banner">
-
-                      <div>
-                        <p class="card-title">By Programming</p>
-
-                        <p class="card-subtitle">04 May 2023</p>
-                      </div>
-                    </div>
-
-                    <a href="https://www.linkedin.com/advice/3/how-can-you-know-when-your-linear-programming-code?utm_source=share&utm_medium=member_desktop&utm_campaign=copy" target="_blank" class="card-btn">Read more</a>
-
-                  </div>
-
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-          <a href="https://www.linkedin.com/showcase/skills-programming/posts/?feedView=articles" target="_blank" class="btn btn-secondary">
-            <span class="span">Show More Posts</span>
-
-            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-          </a>
-
-        </div>
-
-        <img src="./assets/images/shadow-3.svg" width="500" height="1500" loading="lazy" alt="" class="feature-bg">
-
-      </section>
-
-
-
-
-
-      <!-- 
-        - #POPULAR TAGS
-      -->
-
-      <section class="tags" aria-labelledby="tag-label">
-        <div class="container">
-
-          <h2 class="headline headline-2 section-title" id="tag-label">
-            <span class="span">Popular Tags</span>
-          </h2>
-
-          <p class="section-text">
-            Most searched keywords
-          </p>
-
-          <ul class="grid-list">
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-1.png" width="32" height="32" loading="lazy" alt="Travel">
-
-                <p class="btn-text">Server</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-2.png" width="32" height="32" loading="lazy" alt="Culture">
-
-                <p class="btn-text">Cloud</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-3.png" width="32" height="32" loading="lazy" alt="Lifestyle">
-
-                <p class="btn-text">Database</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-4.png" width="32" height="32" loading="lazy" alt="Fashion">
-
-                <p class="btn-text">Mysql</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-5.png" width="32" height="32" loading="lazy" alt="Food">
-
-                <p class="btn-text">React</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-6.png" width="32" height="32" loading="lazy" alt="Space">
-
-                <p class="btn-text">Cyber</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-7.png" width="32" height="32" loading="lazy" alt="Animal">
-
-                <p class="btn-text">Javascript</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-8.png" width="32" height="32" loading="lazy" alt="Minimal">
-
-                <p class="btn-text">Php</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-9.png" width="32" height="32" loading="lazy" alt="Interior">
-
-                <p class="btn-text">Bootstrap</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-10.png" width="32" height="32" loading="lazy" alt="Plant">
-
-                <p class="btn-text">Python</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-11.png" width="32" height="32" loading="lazy" alt="Nature">
-
-                <p class="btn-text">Css</p>
-              </button>
-            </li>
-
-            <li>
-              <button class="card tag-btn">
-                <img src="./assets/images/tag-12.png" width="32" height="32" loading="lazy" alt="Business">
-
-                <p class="btn-text">Html</p>
-              </button>
-            </li>
-
-          </ul>
-
-        </div>
-      </section>
-
-
-
-
-
-      <!-- 
-        - #RECENT POST
-      -->
-
-      <section class="section recent-post" id="recent" aria-labelledby="recent-label">
-        <div class="container">
-
-          <div class="post-main">
-
-            <h2 class="headline headline-2 section-title">
-              <span class="span">Recent posts</span>
-            </h2>
-
-            <p class="section-text">
-              Don't miss the latest trends
-            </p>
-
-            <ul class="grid-list">
-
+          <div class="flex-wrapper">
+            <ul class="desktop-nav">
               <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="./assets/images/codebetter.jpeg" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">Helpful Tips</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href=https://buff.ly/3ZkvFzx target="_blank" class="link hover-2">Unleashing Digital Marvels</a>
-                    </h3>
-
-                    <p class="card-text">
-                      Unleashing Digital Marvels: Your Journey into Web Development with CodeBetter IT Institute!
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Coding</a>
-
-                        <a href="#" class="span hover-2"># Web-designing</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
+                <a href="#" class="nav-link">Home</a>
               </li>
 
               <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="./assets/images/profile.png" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">Helpful Tips</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="https://www.linkedin.com/pulse/software-engineers-guide-writing-stand-out-linkedin-profile-wang" target="_blank" class="link hover-2">Software Engineer’s Guide to Writing a Stand-Out LinkedIn Profile</a>
-                    </h3>
-
-                    <p class="card-text">
-                      So you’re a software engineer ready to look for a new job. You’ve already written a resume and linked it to your LinkedIn page. Now you realize you need to update your LinkedIn Page as well. But what makes a good LinkedIn page? How will you stand out to recruiters?.....
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
+                <a href="#" class="nav-link">About Me</a>
               </li>
 
               <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="./assets/images/linkedin.avif" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">Helpful Tips</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="https://www.samanthaming.com/blog/tips-to-optimize-your-linkedin-profile-for-developers/" target="_blank" class="link hover-2">Tips to Optimize your LinkedIn Profile for Developers</a>
-                    </h3>
-
-                    <p class="card-text">
-                      The main goal of your profile is to optimize it with keywords so it’s easy for recruiters or a potential employer to find your profile when they do a search. Just like SEO for Google. Remember you’re trying to......
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
+                <a href="#" class="nav-link">Contact</a>
               </li>
-
-              <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="./assets/images/interview.avif" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">Helpful Tips</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="https://www.samanthaming.com/blog/how-to-ace-the-developer-interview/" target="_blank" class="link hover-2">How to Ace the Developer Interview</a>
-                    </h3>
-
-                    <p class="card-text">
-                      So you’re ready to get you first developer job. That’s awesome! After going to a few interviews myself. I want to share with you some of my insight into the job interview process and help you better prepare for your......
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-              </li>
-
-              <li>
-                <div class="recent-post-card">
-
-                  <figure class="card-banner img-holder" style="--width: 271; --height: 258;">
-                    <img src="./assets/images/skills.avif" width="271" height="258" loading="lazy"
-                      alt="Helpful Tips for Working from Home as a Freelancer" class="img-cover">
-                  </figure>
-
-                  <div class="card-content">
-
-                    <a href="#" class="card-badge">Helpful Tips</a>
-
-                    <h3 class="headline headline-3 card-title">
-                      <a href="#" class="link hover-2">3 Tips To Improve Your Programming Skills</a>
-                    </h3>
-
-                    <p class="card-text">
-                      Often time when we think of improving our programming skills, we often turn to the “absorbing” knowledge and forget the “applying” knowledge. I believe learning programming or anything, you need....
-                    </p>
-
-                    <div class="card-wrapper">
-                      <div class="card-tag">
-                        <a href="#" class="span hover-2"># Travel</a>
-
-                        <a href="#" class="span hover-2"># Lifestyle</a>
-                      </div>
-
-                      <div class="wrapper">
-                        <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                        <span class="span">3 mins read</span>
-                      </div>
-                    </div>
-
-                  </div>
-
-                </div>
-              </li>
-
             </ul>
 
-            
-
+            <button class="theme-btn theme-btn-desktop light">
+              <ion-icon name="moon" class="moon"></ion-icon>
+              <ion-icon name="sunny" class="sun"></ion-icon>
+            </button>
           </div>
 
-          <div class="post-aside grid-list">
+          <div class="mobile-nav">
+            <button class="nav-close-btn">
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
 
-            <div class="card aside-card">
+            <div class="wrapper">
+              <p class="h3 nav-title">Main Menu</p>
 
-              <h3 class="headline headline-2 aside-title">
-                <span class="span">Popular Tweets</span>
-              </h3>
-
-              <ul class="popular-list">
-
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="./assets/images/popular-post-1.jpg" width="64" height="64" loading="lazy"
-                        alt="Creating is a privilege but it’s also a gift" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="https://twitter.com/VittoStack/status/1475503243493089291" target="_blank" class="link hover-2">Coding is like a pendulum going back and forth between:
-                          "I'm a genius?"
-                          and
-                          "I'm an idiot!"</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">2021/12/27</time>
-                      </div>
-
-                    </div>
-
-                  </div>
+              <ul>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Home</a>
                 </li>
 
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="./assets/images/popular-post-2.jpg" width="64" height="64" loading="lazy"
-                        alt="Being unique is better than being perfect" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="https://twitter.com/KevinNaughtonJr/status/1486758302763601925" target="_blank" class="link hover-2">Most of coding is just Googling</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">2022/01/27</time>
-                      </div>
-
-                    </div>
-
-                  </div>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">About Me</a>
                 </li>
 
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="./assets/images/popular-post-3.jpg" width="64" height="64" loading="lazy"
-                        alt="Every day, in every city and town across the country" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="https://twitter.com/WellPaidGeek/status/1494088730721849344" target="_blank" class="link hover-2">Coding is about problem solving, not about syntax.</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">2022/02/17</time>
-                      </div>
-
-                    </div>
-
-                  </div>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Contact</a>
                 </li>
-
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="./assets/images/popular-post-4.jpg" width="64" height="64" loading="lazy"
-                        alt="Your voice, your mind, your story, your vision" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="https://twitter.com/thatguyintech/status/1512422517717155842" target="_blank" class="link hover-2">coding is
-
-                          - 65% planning
-                          - 5% programming, and
-                          - 90% yelling "f***" at your computer</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">2022/04/08</time>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </li>
-
-                <li>
-                  <div class="popular-card">
-
-                    <figure class="card-banner img-holder" style="--width: 64; --height: 64;">
-                      <img src="./assets/images/popular-post-2.jpg" width="64" height="64" loading="lazy"
-                        alt="Being unique is better than being perfect" class="img-cover">
-                    </figure>
-
-                    <div class="card-content">
-
-                      <h4 class="headline headline-4 card-title">
-                        <a href="https://twitter.com/NavalismHQ/status/1514159705882509312" target="_blank" class="link hover-2">"Coding is a superpower because you can speak the language of robots and command them to do whatever you like."</a>
-                      </h4>
-
-                      <div class="warpper">
-                        <p class="card-subtitle">15 mins read</p>
-
-                        <time class="publish-date" datetime="2022-04-15">2022/04/13</time>
-                      </div>
-
-                    </div>
-
-                  </div>
-                </li>
-
               </ul>
-
             </div>
 
-            <div class="card aside-card">
+            <div>
+              <p class="h3 nav-title">Topics</p>
 
-              <h3 class="headline headline-2 aside-title">
-                <span class="span">Popular Quote</span>
-              </h3>
-
-              <ul class="comment-list">
-
-                <li>
-                  <div class="comment-card">
-
-                    <blockquote class="card-text">
-                      “ Give someone a program; you frustrate them for a day; teach them how to program, and you frustrate them for a lifetime “
-                    </blockquote>
-
-                    <div class="profile-card">
-                      <figure class="profile-banner img-holder">
-                        <img src="./assets/images/author-6.png" width="32" height="32" loading="lazy" alt="Jane Cooper">
-                      </figure>
-
-                      <div>
-                        <p class="card-title">David Leinweber</p>
-                      </div>
-                    </div>
-
-                  </div>
+              <ul>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Web Design</a>
                 </li>
 
-                <li>
-                  <div class="comment-card">
-
-                    <blockquote class="card-text">
-                      “ No one in the brief history of computing has ever written a piece of perfect software. It’s unlikely that you’ll be the first “
-                    </blockquote>
-
-                    <div class="profile-card">
-                      <figure class="profile-banner img-holder">
-                        <img src="./assets/images/author-7.png" width="32" height="32" loading="lazy" alt="Katen Doe">
-                      </figure>
-
-                      <div>
-                        <p class="card-title">Andy Hunt</p>
-                      </div>
-                    </div>
-
-                  </div>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Accessibility</a>
                 </li>
 
-                <li>
-                  <div class="comment-card">
-
-                    <blockquote class="card-text">
-                      “ Debugging becomes significantly easier if you first admit that you are the problem “
-                    </blockquote>
-
-                    <div class="profile-card">
-                      <figure class="profile-banner img-holder">
-                        <img src="./assets/images/author-8.png" width="32" height="32" loading="lazy"
-                          alt="Barbara Cartland">
-                      </figure>
-
-                      <div>
-                        <p class="card-title">William Laeder</p>
-
-                      </div>
-                    </div>
-
-                  </div>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Web Development</a>
                 </li>
-
               </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
 
+    <main>
+      <!--
+      - #HERO SECTION
+    -->
+
+      <div class="hero">
+        <div class="container">
+          <div class="left">
+            <h1 class="h1">
+              Hi, I'm <b>Etomu&nbsp;Tobi</b>. <br />Web Developer
+            </h1>
+
+            <p class="h3">
+              Specialized in Web <abbr title="Development">Design</abbr>
+              and Development
+            </p>
+
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Contact Me</a>
+              <a href="#" class="btn btn-secondary">About Me</a>
+            </div>
+          </div>
+
+          <div class="right">
+            <div class="pattern-bg"></div>
+            <div class="img-box">
+              <img
+                src="./assets/images/my-avatar.png"
+                alt="Etomu Tobi"
+                class="hero-img"
+                width="100%"
+              />
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="container">
+          <!--
+          - BLOG SECTION
+        -->
+
+          <div class="blog">
+            <h2 class="h2">Latest Blog Post</h2>
+
+            <div class="blog-card-group">
+              <div class="blog-card">
+                <div class="blog-card-banner">
+                  <img
+                    src="./assets/images/recent-post-1.jpg"
+                    alt=""
+                    width="250"
+                    class="blog-banner-img"
+                  />
+                </div>
+
+                <div class="blog-content-wrapper">
+                  <button class="blog-topic text-tiny">Web Design</button>
+
+                  <h3>
+                    <a href="#" class="h3">
+                      Lorem ipsum dolor sit amet.
+                    </a>
+                  </h3>
+
+                  <p class="blog-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, non. Deleniti, maxime? Laudantium, ipsam delectus?
+                  </p>
+
+                  <div class="wrapper-flex">
+                    <div class="profile-wrapper">
+                      <img
+                        src="./assets/images/avatar-1.png"
+                        alt="Etomu Tobi"
+                        width="50"
+                      />
+                    </div>
+
+                    <div class="wrapper">
+                      <a href="#" class="h4">Etomu Tobi</a>
+
+                      <p class="text-sm">
+                        <time datetime="2022-01-17">Jan 20, 2023</time>
+                        <span class="separator"></span>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <time datetime="PT3M">3 min</time>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-card">
+                <div class="blog-card-banner">
+                  <img
+                    src="./assets/images/recent-post-2.jpg"
+                    alt=""
+                    width="250"
+                    class="blog-banner-img"
+                  />
+                </div>
+
+                <div class="blog-content-wrapper">
+                  <button class="blog-topic text-tiny">Web Development</button>
+
+                  <h3>
+                    <a href="" class="h3"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </h3>
+
+                  <p class="blog-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae quam, maiores vitae vero veritatis voluptates?
+                  </p>
+
+                  <div class="wrapper-flex">
+                    <div class="profile-wrapper">
+                      <img
+                        src="./assets/images/avatar-1.png"
+                        alt="Etomu Tobi"
+                        width="50"
+                      />
+                    </div>
+
+                    <div class="wrapper">
+                      <a href="#" class="h4">Etomu Tobi</a>
+
+                      <p class="text-sm">
+                        <time datetime="2021-12-10">Dec 19, 2022</time>
+                        <span class="separator"></span>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <time datetime="PT2M">2 min</time>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-card">
+                <div class="blog-card-banner">
+                  <img
+                    src="./assets/images/recent-post-3.jpg"
+                    alt=""
+                    width="250"
+                    class="blog-banner-img"
+                  />
+                </div>
+
+                <div class="blog-content-wrapper">
+                  <button class="blog-topic text-tiny">Marketing</button>
+
+                  <h3>
+                    <a href="" class="h3"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </h3>
+
+                  <p class="blog-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ut assumenda, dolor doloremque esse autem?
+                  </p>
+
+                  <div class="wrapper-flex">
+                    <div class="profile-wrapper">
+                      <img
+                        src="./assets/images/avatar-1.png"
+                        alt="Etomu Tobi"
+                        width="50"
+                      />
+                    </div>
+
+                    <div class="wrapper">
+                      <a href="#" class="h4">Etomu Tobi</a>
+
+                      <p class="text-sm">
+                        <time datetime="2021-11-28">Nov 22, 2022</time>
+                        <span class="separator"></span>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <time datetime="PT4M">4 min</time>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-card">
+                <div class="blog-card-banner">
+                  <img
+                    src="./assets/images/recent-post-4.jpg"
+                    alt=""
+                    width="250"
+                    class="blog-banner-img"
+                  />
+                </div>
+
+                <div class="blog-content-wrapper">
+                  <button class="blog-topic text-tiny">Database</button>
+
+                  <h3>
+                    <a href="" class="h3"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </h3>
+
+                  <p class="blog-text">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut doloremque delectus deleniti voluptatibus sed aspernatur.
+                  </p>
+
+                  <div class="wrapper-flex">
+                    <div class="profile-wrapper">
+                      <img
+                        src="./assets/images/avatar-1.png"
+                        alt="Etomu Tobi"
+                        width="50"
+                      />
+                    </div>
+
+                    <div class="wrapper">
+                      <a href="#" class="h4">Etomu Tobi</a>
+
+                      <p class="text-sm">
+                        <time datetime="2021-11-20">Nov 20, 2021</time>
+                        <span class="separator"></span>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <time datetime="PT4M">4 min</time>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-card">
+                <div class="blog-card-banner">
+                  <img
+                    src="./assets/images/recent-post-5.jpg"
+                    alt=""
+                    width="250"
+                    class="blog-banner-img"
+                  />
+                </div>
+
+                <div class="blog-content-wrapper">
+                  <button class="blog-topic text-tiny">Web Performance</button>
+
+                  <h3>
+                    <a href="" class="h3"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </h3>
+
+                  <p class="blog-text">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet, aliquid assumenda vero fuga aspernatur nam?
+                  </p>
+
+                  <div class="wrapper-flex">
+                    <div class="profile-wrapper">
+                      <img
+                        src="./assets/images/avatar-1.png"
+                        alt="Etomu Tobi"
+                        width="50"
+                      />
+                    </div>
+
+                    <div class="wrapper">
+                      <a href="#" class="h4">Etomu Tobi</a>
+
+                      <p class="text-sm">
+                        <time datetime="2021-11-10">Nov 10, 2021</time>
+                        <span class="separator"></span>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <time datetime="PT3M">3 min</time>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-card">
+                <div class="blog-card-banner">
+                  <img
+                    src="./assets/images/recent-post-1.jpg"
+                    alt=""
+                    width="250"
+                    class="blog-banner-img"
+                  />
+                </div>
+
+                <div class="blog-content-wrapper">
+                  <button class="blog-topic text-tiny">Accessibility</button>
+
+                  <h3>
+                    <a href="" class="h3"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </h3>
+
+                  <p class="blog-text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo perspiciatis quasi praesentium soluta maiores eos.
+                  </p>
+
+                  <div class="wrapper-flex">
+                    <div class="profile-wrapper">
+                      <img
+                        src="./assets/images/avatar-1.png"
+                        alt="Etomu Tobi"
+                        width="50"
+                      />
+                    </div>
+
+                    <div class="wrapper">
+                      <a href="#" class="h4">Etomu Tobi</a>
+
+                      <p class="text-sm">
+                        <time datetime="2021-10-25">Oct 25, 2021</time>
+                        <span class="separator"></span>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <time datetime="PT7M">7 min</time>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-card">
+                <div class="blog-card-banner">
+                  <img
+                    src="./assets/images/recent-post-2.jpg"
+                    alt=""
+                    width="250"
+                    class="blog-banner-img"
+                  />
+                </div>
+
+                <div class="blog-content-wrapper">
+                  <button class="blog-topic text-tiny">Database</button>
+
+                  <h3>
+                    <a href="" class="h3"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </h3>
+
+                  <p class="blog-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eveniet, vitae consequuntur modi eum voluptas.
+                  </p>
+
+                  <div class="wrapper-flex">
+                    <div class="profile-wrapper">
+                      <img
+                        src="./assets/images/avatar-1.png"
+                        alt="Etomu Tobi"
+                        width="50"
+                      />
+                    </div>
+
+                    <div class="wrapper">
+                      <a href="#" class="h4">Etomu Tobi</a>
+
+                      <p class="text-sm">
+                        <time datetime="2021-10-15">Oct 15, 2021</time>
+                        <span class="separator"></span>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <time datetime="PT5M">5 min</time>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-card">
+                <div class="blog-card-banner">
+                  <img
+                    src="./assets/images/recent-post-3.jpg"
+                    alt=""
+                    width="250"
+                    class="blog-banner-img"
+                  />
+                </div>
+
+                <div class="blog-content-wrapper">
+                  <button class="blog-topic text-tiny">Web Performance</button>
+
+                  <h3>
+                    <a href="" class="h3"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </h3>
+
+                  <p class="blog-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis natus iusto eaque incidunt repudiandae? Eligendi!
+                  </p>
+
+                  <div class="wrapper-flex">
+                    <div class="profile-wrapper">
+                      <img
+                        src="./assets/images/avatar-1.png"
+                        alt="Etomu Tobi"
+                        width="50"
+                      />
+                    </div>
+
+                    <div class="wrapper">
+                      <a href="#" class="h4">Etomu Tobi</a>
+
+                      <p class="text-sm">
+                        <time datetime="2021-10-03">Oct 3, 2021</time>
+                        <span class="separator"></span>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <time datetime="PT5M">5 min</time>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-card">
+                <div class="blog-card-banner">
+                  <img
+                    src="./assets/images/recent-post-4.jpg"
+                    alt="The best web accessibility tools for developers in 2021"
+                    width="250"
+                    class="blog-banner-img"
+                  />
+                </div>
+
+                <div class="blog-content-wrapper">
+                  <button class="blog-topic text-tiny">Accessibility</button>
+
+                  <h3>
+                    <a href="" class="h3"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </h3>
+
+                  <p class="blog-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit iusto deleniti quos minima architecto tempore?
+                  </p>
+
+                  <div class="wrapper-flex">
+                    <div class="profile-wrapper">
+                      <img
+                        src="./assets/images/avatar-1.png"
+                        alt="Etomu Tobi"
+                        width="50"
+                      />
+                    </div>
+
+                    <div class="wrapper">
+                      <a href="#" class="h4">Etomu Tobi</a>
+
+                      <p class="text-sm">
+                        <time datetime="2021-09-13">Sep 13, 2021</time>
+                        <span class="separator"></span>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <time datetime="PT7M">7 min</time>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="blog-card">
+                <div class="blog-card-banner">
+                  <img
+                    src="./assets/images/recent-post-5.jpg"
+                    alt=""
+                    width="250"
+                    class="blog-banner-img"
+                  />
+                </div>
+
+                <div class="blog-content-wrapper">
+                  <button class="blog-topic text-tiny">Database</button>
+
+                  <h3>
+                    <a href="" class="h3"
+                      >Lorem ipsum dolor sit amet.</a
+                    >
+                  </h3>
+
+                  <p class="blog-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias asperiores nam nisi. Dolore, repellendus saepe!
+                  </p>
+
+                  <div class="wrapper-flex">
+                    <div class="profile-wrapper">
+                      <img
+                        src="./assets/images/avatar-1.png"
+                        alt="Etomu Tobi"
+                        width="50"
+                      />
+                    </div>
+
+                    <div class="wrapper">
+                      <a href="#" class="h4">Etomu Tobi</a>
+
+                      <p class="text-sm">
+                        <time datetime="2021-09-21">Sep 21, 2021</time>
+                        <span class="separator"></span>
+                        <ion-icon name="time-outline"></ion-icon>
+                        <time datetime="PT4M">4 min</time>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="card aside-card insta-card">
+            <button class="btn load-more">Load More</button>
+          </div>
 
-              <a href="#" class="logo">
-                <img src="./assets/images/logo.png" width="119" height="37" loading="lazy" alt="Wren logo">
+          <!--
+          - ASIDE
+        -->
+
+          <div class="aside">
+            <div class="topics">
+              <h2 class="h2">Topics</h2>
+
+              <a href="#" class="topic-btn">
+                <div class="icon-box">
+                  <ion-icon name="server-outline"></ion-icon>
+                </div>
+
+                <p>Web Design</p>
               </a>
 
-              <p class="card-text">
-                Follow us on instagram
-              </p>
+              <a href="#" class="topic-btn">
+                <div class="icon-box">
+                  <ion-icon name="accessibility-outline"></ion-icon>
+                </div>
 
-              <ul class="insta-list">
+                <p>E-commerce Marketing</p>
+              </a>
 
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-1.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
+              <a href="#" class="topic-btn">
+                <div class="icon-box">
+                  <ion-icon name="rocket-outline"></ion-icon>
+                </div>
 
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-2.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-3.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-4.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-5.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-6.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-7.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-8.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" class="insta-post img-holder" style="--width: 276; --height: 277;">
-                    <img src="./assets/images/insta-post-9.png" width="276" height="277" loading="lazy" alt="insta post"
-                      class="img-cover">
-                  </a>
-                </li>
-
-              </ul>
-
+                <p>Web Development</p>
+              </a>
             </div>
 
+            <div class="tags">
+              <h2 class="h2">Tags</h2>
+
+              <div class="wrapper">
+                <button class="hashtag">#Html</button>
+                <button class="hashtag">#Css</button>
+                <button class="hashtag">#Javascript</button>
+                <button class="hashtag">#Web Template</button>
+                <button class="hashtag">#React</button>
+                <button class="hashtag">#Nodejs</button>
+                <button class="hashtag">#Optimize</button>
+                <button class="hashtag">#Performance</button>
+              </div>
+            </div>
+
+            <div class="contact">
+              <h2 class="h2">Let's Talk</h2>
+
+              <div class="wrapper">
+                <p>
+                  Do you want to learn more about how I can help your company
+                  overcome problems? Let us have a conversation.
+                </p>
+
+                <ul class="social-link">
+                  <li>
+                    <a href="#" class="icon-box discord">
+                      <ion-icon name="logo-whatsapp"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="icon-box facebook">
+                      <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="icon-box twitter">
+                      <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="icon-box facebook">
+                      <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="newsletter">
+              <h2 class="h2">Newsletter</h2>
+
+              <div class="wrapper">
+                <p>
+                  Subscribe to our newsletter to be among the first to keep up
+                  with the latest updates.
+                </p>
+
+                <form action="#">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                  />
+
+                  <button type="submit" class="btn btn-primary">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
-
         </div>
-      </section>
+      </div>
+    </main>
 
-    </article>
-  </main>
-
-
-
-
-
-  <!-- 
+    <!--
     - #FOOTER
   -->
 
-  <footer>
-    <div class="container">
+    <footer>
+      <div class="container">
+        <div class="wrapper">
+          <a href="#" class="footer-logo">
+            <img
+              src="./assets/images/logo-dark.png"
+              alt="DevBlog's Logo"
+              width="100%"
+              height="50"
+              class="logo-light"
+            />
+            <img
+              src="./assets/images/logo-light.png"
+              alt="DevBlog's Logo"
+              width="100%"
+              height="50"
+              class="logo-dark"
+            />
+          </a>
 
-      <div class="card footer">
-
-        <div class="section footer-top">
-
-          <div class="footer-brand">
-
-            <a href="#" class="logo">
-              <img src="./assets/images/logo.png" width="119" height="37" loading="lazy" alt="Wren logo">
-            </a>
-
-            <p class="footer-text">
-              Coding is today's language of creativity. Everybody deserve a chance to become creators instead of consumers of computer science. The programmers of tomorrow are the wizards of the future. You're going to look like you have magic powers compared to everybody else.
-            </p>
-
-            <p class="footer-list-title">Address</p>
-
-            <address class="footer-text address">
-              11 Ibadan Street, Yaba.<br>
-              Lagos, Nigeria 100001.
-            </address>
-
-          </div>
-
-          <div class="footer-list">
-            <form action="https://formspree.io/f/mknlpngv"
-              method="POST">
-
-              <p class="footer-list-title">Newsletter</p>
-
-                <p class="footer-text">
-                  Sign up to be first to receive the latest stories inspiring us, case studies, and industry news.
-                </p>
-
-                <div class="input-wrapper">
-                  <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
-
-                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-                </div>
-
-                <div class="input-wrapper">
-                  <input type="email" name="email_address" placeholder="Emaill address" required class="input-field"
-                  autocomplete="off">
-
-                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
-                </div>
-          
-
-                  <a href="#" class="btn btn-primary">
-                  <button class="span">Subscribe</button>
-
-                  <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
-                  </a>
-            </form>
-          </div>
-
-        </div>
-
-        <div class="footer-bottom">
-
-          <p class="copyright">
-            &copy; Developed by <a href="#" class="copyright-link">Tobi.</a>
+          <p class="footer-text">
+            Learn about Web Design, Web Development, and E-commerce Marketing.
           </p>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-
-                <span class="span">Twitter</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-
-                <span class="span">LinkedIn</span>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-instagram"></ion-icon>
-
-                <span class="span">Instagram</span>
-              </a>
-            </li>
-
-          </ul>
-
         </div>
 
+        <div class="wrapper">
+          <p class="footer-title">Quick Links</p>
+
+          <ul>
+            <li>
+              <a href="#" class="footer-link">Advertise with us</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">About Us</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="wrapper">
+          <p class="footer-title">Legal Stuff</p>
+
+          <ul>
+            <li>
+              <a href="#" class="footer-link">Privacy Notice</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Cookie Policy</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Terms Of Use</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
-    </div>
-  </footer>
+      <p class="copyright">&copy; Copyright 2023 <a href="#">T-Dev</a></p>
+    </footer>
 
-
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
-  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
-    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
-  </a>
-
-
-
-
-
-  <!-- 
+    <!--
     - custom js link
   -->
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.min.js"></script>
 
-  <!-- 
+    <!--
     - ionicon link
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
